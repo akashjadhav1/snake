@@ -7,10 +7,20 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.3",
     "@testing-library/user-event": "^13.5.0",
+    "autoprefixer": "^10.6.1",
+    "framer-motion": "^14.3.0",
+    "postcss": "^8.5.31",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "react-scripts": "5.0.1",
+    "tailwindcss": "^3.4.19",
     "web-vitals": "^2.1.4"
+  },
+  "postcss": {
+    "plugins": [
+      "tailwindcss",
+      "autoprefixer"
+    ]
   },
   "scripts": {
     "start": "react-scripts start",
