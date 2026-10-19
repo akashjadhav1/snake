@@ -2,15 +2,15 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 // ---------- Game constants ----------
-const GRID_SIZE = 20; // 20 x 20 cells
-const CELL = 100 / GRID_SIZE; // cell size in % of the board
+const GRID_SIZE = 20; 
+const CELL = 100 / GRID_SIZE; 
 const STORAGE_KEY = 'snake-high-scores';
 const THEME_KEY = 'snake-theme';
 const MUSIC_KEY = 'snake-muted';
 const BG_MUSIC = `${process.env.PUBLIC_URL}/musics/bg_music.mp3`;
 const EAT_SOUND = `${process.env.PUBLIC_URL}/musics/eat_sound.mp3`;
 const GAME_OVER_SOUND = `${process.env.PUBLIC_URL}/musics/game_over.mp3`;
-const EAT_SOUND_SKIP = 3; // eat_sound.mp3 has ~3s of silence up front - start at 3s to play only the crunch clip
+const EAT_SOUND_SKIP = 3; 
 
 // ---------- Clay themes (all colors flow through CSS variables) ----------
 const THEMES = [
@@ -209,7 +209,7 @@ function DPadButton({ onPress, children, className = '' }) {
   return (
     <motion.button
       whileTap={{ scale: 0.85 }}
-      onPointerDown={(e) => {
+      onPointerDown={e => {
         e.preventDefault();
         onPress();
       }}
